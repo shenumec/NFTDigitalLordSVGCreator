@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVG Creator", "SVG Creator\SVG Creator.csproj", "{F52F8599-21A5-454A-9FD5-F94B77FBF178}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F52F8599-21A5-454A-9FD5-F94B77FBF178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F52F8599-21A5-454A-9FD5-F94B77FBF178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F52F8599-21A5-454A-9FD5-F94B77FBF178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F52F8599-21A5-454A-9FD5-F94B77FBF178}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10E0957A-22DC-44DF-994F-F557CA2E053E}
+	EndGlobalSection
+EndGlobal
