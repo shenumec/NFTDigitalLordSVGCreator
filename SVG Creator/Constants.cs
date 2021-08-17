@@ -28,9 +28,12 @@ namespace SVG_Creator
 
         //SVG for Dress Pattethodap
         public static string pattethodap =
-            @"<g> <title>NewDress</title> <path d=""M 309 583 C 340 584 379 597 496 584 C 521 634 498 710 499 713 C 493 756 500 808 483 852 C 448 843 422 764 405 723 C 395 779 358 853 326 848 C 316 797 312 759 310 704 C 309 704 290 615 316 584 Z "" stroke-width=""1"" stroke=""black"" fill=""Red"" id=""NewDress"" /> " +
+            @"<g> <title>NewDress</title> <path d=""M 317 583 C 342 581 480 588 503 583 C 521 634 498 710 499 713 C 493 756 500 808 483 852 C 448 843 422 764 405 723 C 395 779 358 853 326 848 C 316 797 312 759 310 704 C 309 704 290 615 316 584 Z"" stroke-width=""1"" stroke=""black"" fill=""Red"" id=""NewDress"" /> " +
+            @"<path d = "" M 312 739 C 343 735 372 717 397 704 M 316 776 C 352 771 372 741 396 721 M 322 817 C 348 804 375 774 398 731 M 496 737 C 468 732 438 719 416 706 M 496 776 C 465 767 437 742 413 720 M 491 816 C 459 796 432 762 414 729 Z"" stroke-width=""1"" stroke=""black"" fill=""gold"" id=""NewDress"" />" +
             @"<path d = "" M 387 618 L 361 731 C 398 763 408 761 443 730 L 416 619 Z"" stroke-width=""1"" stroke=""black"" fill=""gold"" id=""NewDress"" />" +
-            @"<path d = ""M 317 583 C 365 590 414 603 503 583 L 512 602 C 507 616 489 620 475 600 C 477 620 449 640 429 606 C 424 653 385 634 386 604 C 390 617 352 637 344 599 C 343 625 302 616 317 584 Z"" stroke-width=""1"" stroke=""black"" fill=""gold"" id=""NewDress"" /> " +
+            @"<path d = "" M 396 628 L 377 730 M 405 629 L 403 737 M 412 628 L 426 733Z"" stroke-width=""1"" stroke=""black"" fill=""gold"" id=""NewDress"" />" +
+            @"<path d = ""M 317 583 C 368 581 412 586 503 583 L 510 604 C 504 618 489 620 468 601 C 466 616 448 641 423 607 C 415 651 385 634 382 603 C 390 617 352 637 344 599 C 343 625 302 616 317 584 Z"" stroke-width=""1"" stroke=""black"" fill=""gold"" id=""NewDress"" /> " +
+            @"<path d = ""M 325 600 A 1 1 0 0 0 332 603 A 1 1 0 0 0 325 600 M 362 608 A 1 1 0 0 0 370 608 A 1 1 0 0 0 362 608 M 400 620 A 1 1 0 0 0 408 621 A 1 1 0 0 0 400 620 M 445 615 A 1 1 0 0 0 453 613 A 1 1 0 0 0 445 615 M 493 606 A 1 1 0 0 0 501 605 A 1 1 0 0 0 493 606 Z"" stroke-width=""1"" stroke=""black"" fill=""red"" id=""NewDress"" /> " +
             @"</g>";
 
         //Face SVG
