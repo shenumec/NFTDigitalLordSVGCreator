@@ -50,6 +50,21 @@ namespace SVG_Creator
             @"<path d = ""M 386 360 C 381 360 382 365 383 366 C 384 369 395 375 410 375 C 423 374 426 371 429 369 C 431 367 431 364 431 363 C 431 360 428 361 426 362 C 425 362.6667 424 364.3333 422 366 C 414 368 404 370 394 366 C 391.3333 364 388.6667 362 386 360"" fill=""#1A6BA0"" id=""LowerLip"" />"+
             @"</g>";
 
+        //Face SVG
+        public static string monkeyFace =
+            @"<g>" +
+            @"<title> Face </title>" +
+            @"<path d=""M 330 276 A 1 1 0 0 0 372 279 A 1 1 0 0 0 330 273 Z"" stroke-width=""1"" stroke=""#1C8FDF"" fill=""black"" id=""LeftEye"" />" +
+            @"<path d = ""M 350 268 A 1 1 0 0 0 364 268 A 1 1 0 0 0 350 267 Z"" stroke-width=""1"" stroke=""#1C8FDF"" fill=""white"" id=""LeftEyeInside"" />" +
+            @"<path d = ""M 443 276 A 1 1 0 0 0 485 276 A 1 1 0 0 0 443 275 Z"" stroke-width=""1"" stroke=""#1C8FDF"" fill=""black"" id=""RightEye"" />" +
+            @"<path d = ""M 463 268 A 1 1 0 0 0 478 266 A 1 1 0 0 0 463 267 Z"" stroke-width=""1"" stroke=""#1C8FDF"" fill=""white"" id=""RightEyeInside"" />" +
+            @"<path d=  ""M 496 261 C 488 254 475 241 449 247 L 447 234 C 495 234 495 261 496 261Z"" stroke-width=""1"" stroke=""#1C8FDF"" fill=""black"" id=""RightEyeBrow"" />" +
+            @"<path d = ""M 321 262 C 326 259 332 244 369 247 L 369 234 C 330 237 325 251 321 262Z"" stroke-width=""1"" stroke=""#1C8FDF"" fill=""black"" id=""LeftEyeBrow"" />" +
+            @"<path d = ""M 383 329 L 434 328 C 441 329 469 335 463 359 C 463 365 460 386 436 392 C 428 393 421 394 412 391 C 402 394 395 394 387 393 C 365 390 356 368 356 350 C 357 345 361 331 383 329Z"" fill=""pink"" id=""UpperLip"" />" +
+            @"<path d = ""M 363 351 C 383 360 397 354 409 351 C 436 358 444 356 457 347 C 443 370 421 359 410 356 C 392 364 374 360 363 351 Z"" fill=""brown"" id=""LowerLip"" />" +
+            @"<path d = ""M 394 315 C 401 312 408 321 407 324 C 402 321 392 320 394 315 Z M 412 324 C 414 320 416 314 424 316 C 426 322 416 320 412 324 Z"" fill=""brown"" id=""Nose"" />" +
+            @"</g>";
+
         //Weapon SVG
         public static string yogaDanda =
             @"<g>" +
@@ -86,25 +101,31 @@ namespace SVG_Creator
         //Weapon map
         public static Dictionary<int, string> weaponMap = new Dictionary<int, string>(2);
 
+        //Face map
+        public static Dictionary<int, string> faceMap = new Dictionary<int, string>(2);
+
         static Constants()
         {
-            Constants.skinColorMap.Add(0, "#1C8FDF");
-            Constants.skinColorMap.Add(1, "green");
-            Constants.skinColorMap.Add(2, "black");
-            Constants.skinColorMap.Add(3, "pink");
-            Constants.skinColorMap.Add(4, "yellow");
-
+           
             Constants.bgColorMap.Add(0, "#1C8FDF");
             Constants.bgColorMap.Add(1, "green");
             Constants.bgColorMap.Add(2, "grey");
             Constants.bgColorMap.Add(3, "pink");
             Constants.bgColorMap.Add(4, "yellow");
 
+            Constants.skinColorMap.Add(0, "#1C8FDF");
+            Constants.skinColorMap.Add(1, "green");
+            Constants.skinColorMap.Add(2, "pink");
+            Constants.skinColorMap.Add(3, "yellow");
+
             dressMap.Add(0,konagam);
             dressMap.Add(1,pattethodap);
 
             weaponMap.Add(0,yogaDanda);
             weaponMap.Add(1,mace);
+
+            faceMap.Add(0, happyFace);
+            faceMap.Add(1, monkeyFace);
 
         }
     }
