@@ -20,27 +20,32 @@ namespace SerializeToFileAsync
                 foreach (var skinColor in Constants.skinColorMap)
                 {
                     string skinWithColor = Constants.skin.Replace(Constants.skinColorFill, skinColor.Value);
-                    foreach (var faceMap in Constants.faceMap)
+                    foreach (var crownmap in Constants.crownMap)
                     {
-                        foreach (var dressMap in Constants.dressMap)
+                        foreach (var faceMap in Constants.faceMap)
                     {
-
-                        foreach (var weapon in Constants.weaponMap)
+                        string faceWithColor = faceMap.Value.Replace(Constants.skinColorFill, skinColor.Value);
+                            foreach (var dressMap in Constants.dressMap)
                         {
-                            string handCoverWithSkin =
-                                Constants.handCover.Replace(Constants.skinColorFill, skinColor.Value);
-                            File.WriteAllText("C:\\work\\NFT\\SVG\\Output\\Dummy" + count + ".svg",
-                                Constants.svgHeader +
-                                backgroundRectWithColor +
-                                skinWithColor +
-                                Constants.hair +
-                                dressMap.Value +
-                                faceMap +
-                                weapon.Value +
-                                handCoverWithSkin +
-                                Constants.svgFooter
-                            );
-                            count++;
+
+                            foreach (var weapon in Constants.weaponMap)
+                            {
+                                string handCoverWithSkin =
+                                    Constants.handCover.Replace(Constants.skinColorFill, skinColor.Value);
+                                File.WriteAllText("C:\\work\\NFT\\SVG\\Output\\Dummy" + count + ".svg",
+                                    Constants.svgHeader +
+                                    backgroundRectWithColor +
+                                    skinWithColor +
+                                    Constants.hair +
+                                    crownmap+
+                                    dressMap.Value +
+                                    faceWithColor +
+                                    weapon.Value +
+                                    handCoverWithSkin +
+                                    Constants.svgFooter
+                                );
+                                count++;
+                            }
                         }
                     }
                         

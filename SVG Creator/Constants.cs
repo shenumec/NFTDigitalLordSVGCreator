@@ -12,7 +12,7 @@ namespace SVG_Creator
         public static string skinColorFill = "skinColor";
 
         //SVG Header
-        public static string svgHeader = @"<svg width=""819"" height=""1300"" xmlns=""http://www.w3.org/2000/svg"" version=""1.0"" preserveAspectRatio=""xMidYMid meet"">";
+        public static string svgHeader = @"<svg width=""819"" height=""1000"" xmlns=""http://www.w3.org/2000/svg"" version=""1.0"" preserveAspectRatio=""xMidYMid meet"">";
 
         //SVG for background
         public static string backgroundRect = @"<g> <rect id = ""background"" height = ""1300"" width = ""819"" y = ""0"" x = ""0"" stroke = ""black"" fill = ""bgColor""/> </g> ";
@@ -63,6 +63,18 @@ namespace SVG_Creator
             @"<path d = ""M 383 329 L 434 328 C 441 329 469 335 463 359 C 463 365 460 386 436 392 C 428 393 421 394 412 391 C 402 394 395 394 387 393 C 365 390 356 368 356 350 C 357 345 361 331 383 329Z"" fill=""pink"" id=""UpperLip"" />" +
             @"<path d = ""M 363 351 C 383 360 397 354 409 351 C 436 358 444 356 457 347 C 443 370 421 359 410 356 C 392 364 374 360 363 351 Z"" fill=""brown"" id=""LowerLip"" />" +
             @"<path d = ""M 394 315 C 401 312 408 321 407 324 C 402 321 392 320 394 315 Z M 412 324 C 414 320 416 314 424 316 C 426 322 416 320 412 324 Z"" fill=""brown"" id=""Nose"" />" +
+            @"<path d = ""M 530 405 C 542 367 557 324 584 291 C 607 265 617 278 622 296 L 614 300 C 614 276 593 290 591 298 C 568 329 549 374 538 416 Z"" stroke-width=""3"" stroke=""#1A6BA0"" fill=""skinColor"" id=""Tail"" />" +
+            @"<path d = ""M 614 300 C 608 303 611 325 621 340 C 619 310 629 312 623 296"" fill=""brown"" id=""TailHair"" />" +
+            @"</g>";
+
+        //Crown SVG
+        public static string crown =
+            @"<g>" +
+            @"<title>Crown</title>" +
+            @"<path d = ""M 281 247 C 251 93 327 58 411 39 C 551 54 555 190 537 244 C 450 181 304 210 281 247 Z"" stroke-width=""1"" stroke=""black"" fill=""Gold"" id=""Crown""/>" +
+            @"<path d = ""M 294 234 C 285 207 288 106 366 71 M 320 221 C 325 176 324 123 376 77 M 369 209 C 371 169 380 125 393 81 M 443 207 C 439 169 438 124 422 82 M 497 222 C 494 178 494 120 439 79 M 527 236 C 542 141 483 88 452 76 C 428 80 398 89 368 70 C 370.6667 67 373.3333 64 376 61 C 399 70 422 67 441 62 C 444.6667 65.6667 450 68 452 75 M 443 62 C 450 50 438 43 426 37 C 416 38 406 38 396 37 C 378 44 374 53 376 61 M 396 37 C 393 28 405.3333 12.3333 411 -1 C 419 13 427 30 426 37 Z"" stroke-width=""1"" stroke=""black"" fill=""Gold"" id=""Crown""/>" +
+            @"<path d = ""M 295 234 C 292 223 284 205 292 196 C 296 178 311 174 320 171 C 332 151 351 147 364 145 C 367 141 384 119 405 117 C 424 120 441 136 445 142 C 476 149 493 167 499 173 C 537 194 534 221 527 236 c -27 -18 -144 -54 -232 -2 Z "" stroke-width=""1"" stroke=""black"" fill=""Gold"" id=""Crown""/>" +
+            @"<path d = ""M 309 198 A 1 1 0 0 0 321 199 A 1 1 0 0 0 309 198 M 352 187 A 1 1 0 0 0 363 184 A 1 1 0 0 0 352 186 M 405 183 C 396 183 390 161 406 140 C 419 160 415 185 405 183 M 453 185 A 1 1 0 0 0 464 184 A 1 1 0 0 0 453 185 M 498 199 A 1 1 0 0 0 509 199 A 1 1 0 0 0 498 199 Z "" stroke-width=""1"" stroke=""black"" fill=""Red"" id=""Crown""/>" +
             @"</g>";
 
         //Weapon SVG
@@ -104,19 +116,22 @@ namespace SVG_Creator
         //Face map
         public static Dictionary<int, string> faceMap = new Dictionary<int, string>(2);
 
+        //Crown map
+        public static Dictionary<int, string> crownMap = new Dictionary<int, string>(2);
+
         static Constants()
         {
            
             Constants.bgColorMap.Add(0, "#1C8FDF");
-            Constants.bgColorMap.Add(1, "green");
-            Constants.bgColorMap.Add(2, "grey");
-            Constants.bgColorMap.Add(3, "pink");
-            Constants.bgColorMap.Add(4, "yellow");
+            //Constants.bgColorMap.Add(1, "green");
+            //Constants.bgColorMap.Add(2, "#0C1013");
+            //Constants.bgColorMap.Add(3, "pink");
+            Constants.bgColorMap.Add(4, "#4E4445");
 
             Constants.skinColorMap.Add(0, "#1C8FDF");
-            Constants.skinColorMap.Add(1, "green");
-            Constants.skinColorMap.Add(2, "pink");
-            Constants.skinColorMap.Add(3, "yellow");
+            Constants.skinColorMap.Add(1, "#8B8C8E");
+            Constants.skinColorMap.Add(2, "#FBC0A2");
+            Constants.skinColorMap.Add(3, "#5F80B6");
 
             dressMap.Add(0,konagam);
             dressMap.Add(1,pattethodap);
@@ -126,6 +141,9 @@ namespace SVG_Creator
 
             faceMap.Add(0, happyFace);
             faceMap.Add(1, monkeyFace);
+
+            crownMap.Add(0,String.Empty);
+            crownMap.Add(1, crown);
 
         }
     }
