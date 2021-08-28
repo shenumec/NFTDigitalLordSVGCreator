@@ -1,16 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace SVG_Creator
-{
-    public static class Constants
-    {
+namespace SVG_Creator  {
+    public static class Constants  {
+
         //String to replace in SVG for Back Ground color
         public static string bgColorFill = "bgColor";
         //String to replace in SVG for Skin color
         public static string skinColorFill = "skinColor";
 
+        #region ColorConstants
+        public static string lightBlueColor = "#1C8FDF";
+        public static string greyColor = "#454545";
+
+        public static string mediumGreyColor = "#8B8C8E";
+        public static string pinkColor = "#FBC0A2";
+        public static string mediumblueColor = "#5F80B6";
+        #endregion
+
+        #region SVG'S
         //SVG Header
         public static string svgHeader = @"<svg width=""819"" height=""1000"" xmlns=""http://www.w3.org/2000/svg"" version=""1.0"" preserveAspectRatio=""xMidYMid meet"">";
 
@@ -101,49 +108,58 @@ namespace SVG_Creator
         //SVG Footer
         public static string svgFooter = @"</svg>";
 
+        #endregion
+
+        #region Gene Map
         //Background color map
-        public static Dictionary<int, string> bgColorMap = new Dictionary<int, string>(5);
+        public static Dictionary<int, Traits> bgColorMap = new Dictionary<int, Traits>(5);
 
         //Skin COlor map
-        public static Dictionary<int, string> skinColorMap = new Dictionary<int, string>(5);
+        public static Dictionary<int, Traits> skinColorMap = new Dictionary<int, Traits>(5);
 
         //Dress map
-        public static Dictionary<int, string> dressMap = new Dictionary<int, string>(2);
+        public static Dictionary<int, Traits> dressMap = new Dictionary<int, Traits>(2);
 
         //Weapon map
-        public static Dictionary<int, string> weaponMap = new Dictionary<int, string>(2);
+        public static Dictionary<int, Traits> weaponMap = new Dictionary<int, Traits>(2);
 
         //Face map
-        public static Dictionary<int, string> faceMap = new Dictionary<int, string>(2);
+        public static Dictionary<int, Traits> faceMap = new Dictionary<int, Traits>(2);
 
         //Crown map
-        public static Dictionary<int, string> crownMap = new Dictionary<int, string>(2);
+        public static Dictionary<int, Traits> crownMap = new Dictionary<int, Traits>(2);
 
-        static Constants()
-        {
-           
-            Constants.bgColorMap.Add(0, "#1C8FDF");
-            //Constants.bgColorMap.Add(1, "green");
-            //Constants.bgColorMap.Add(2, "#0C1013");
-            //Constants.bgColorMap.Add(3, "pink");
-            Constants.bgColorMap.Add(4, "#4E4445");
+        #endregion
+        static Constants() {
 
-            Constants.skinColorMap.Add(0, "#1C8FDF");
-            Constants.skinColorMap.Add(1, "#8B8C8E");
-            Constants.skinColorMap.Add(2, "#FBC0A2");
-            Constants.skinColorMap.Add(3, "#5F80B6");
+            //Create trait map
+            //TODO create from JSON File
 
-            dressMap.Add(0,konagam);
-            dressMap.Add(1,pattethodap);
+            //Create map of Background color
+            bgColorMap.Add(0, new Traits(){Gene="BgColor",Index=0,Name = "BlueBackground",SVG = lightBlueColor });
+            bgColorMap.Add(1, new Traits(){ Gene = "BgColor", Index = 1, Name = "BrownBackground", SVG = greyColor });
 
-            weaponMap.Add(0,yogaDanda);
-            weaponMap.Add(1,mace);
+            //Create map of Skin Color
+            skinColorMap.Add(0, new Traits() { Gene = "SkinColor", Index = 0, Name = "RamaSkin", SVG = lightBlueColor });
+            skinColorMap.Add(1, new Traits() { Gene = "SkinColor", Index = 1, Name = "ShivaSkin", SVG = mediumGreyColor });
+            skinColorMap.Add(2, new Traits() { Gene = "SkinColor", Index = 2, Name = "HumanSkin", SVG = pinkColor });
+            skinColorMap.Add(3, new Traits() { Gene = "SkinColor", Index = 3, Name = "KrishnaSkin", SVG = mediumblueColor });
 
-            faceMap.Add(0, happyFace);
-            faceMap.Add(1, monkeyFace);
+            //Create map of Dress
+            dressMap.Add(0, new Traits() { Gene = "Dress", Index = 0, Name = "Konagam", SVG = konagam ,Description = "True ascetic should not wear anything other than Langot" });
+            dressMap.Add(1, new Traits() { Gene = "Dress", Index = 1, Name = "Pattethodap", SVG = pattethodap, Description = "This attire showcases an ethnic blend of tradition and modernity" });
 
-            crownMap.Add(0,String.Empty);
-            crownMap.Add(1, crown);
+            //Create map of Weapon
+            weaponMap.Add(0, new Traits() { Gene = "Weapon", Index = 0, Name = "YogaStick", SVG = yogaDanda ,Description = "The Meditation Stick is a very ancient and traditional yoga tool to assist in one's spiritual practice" });
+            weaponMap.Add(1, new Traits() { Gene = "Weapon", Index = 1, Name = "Mace", SVG = mace, Description = "The gada is the main weapon of the Hindu God Hanuman, wielding Gada means you are very strong" });
+
+            //Create map of Face
+            faceMap.Add(0, new Traits() { Gene = "Face", Index = 0, Name = "HumanHappyFace", SVG = happyFace });
+            faceMap.Add(1, new Traits() { Gene = "Face", Index = 1, Name = "MonketHappyFace", SVG = monkeyFace });
+
+            //Create map of Crown
+            crownMap.Add(0, new Traits() { Gene = "Crown", Index = 0, Name = "NoCrown", SVG = string.Empty });
+            crownMap.Add(1, new Traits() { Gene = "Crown", Index = 1, Name = "GoldenCrown", SVG = crown });
 
         }
     }
