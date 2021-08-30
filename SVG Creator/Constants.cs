@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 
 namespace SVG_Creator  {
+    /// <summary>
+    /// This class contains the current defined traits
+    /// </summary>
     public static class Constants  {
-
         //String to replace in SVG for Back Ground color
         public static string bgColorFill = "bgColor";
         //String to replace in SVG for Skin color
@@ -43,7 +45,7 @@ namespace SVG_Creator  {
             @"<path d = ""M 325 600 A 1 1 0 0 0 332 603 A 1 1 0 0 0 325 600 M 362 608 A 1 1 0 0 0 370 608 A 1 1 0 0 0 362 608 M 400 620 A 1 1 0 0 0 408 621 A 1 1 0 0 0 400 620 M 445 615 A 1 1 0 0 0 453 613 A 1 1 0 0 0 445 615 M 493 606 A 1 1 0 0 0 501 605 A 1 1 0 0 0 493 606 Z"" stroke-width=""1"" stroke=""black"" fill=""red"" id=""NewDress"" /> " +
             @"</g>";
 
-        //Face SVG
+        //Human Face SVG
         public static string happyFace =
             @"<g>" +
             @"<title> Face </title>" +
@@ -57,7 +59,7 @@ namespace SVG_Creator  {
             @"<path d = ""M 386 360 C 381 360 382 365 383 366 C 384 369 395 375 410 375 C 423 374 426 371 429 369 C 431 367 431 364 431 363 C 431 360 428 361 426 362 C 425 362.6667 424 364.3333 422 366 C 414 368 404 370 394 366 C 391.3333 364 388.6667 362 386 360"" fill=""#1A6BA0"" id=""LowerLip"" />"+
             @"</g>";
 
-        //Face SVG
+        //Monkey Face SVG
         public static string monkeyFace =
             @"<g>" +
             @"<title> Face </title>" +
@@ -84,13 +86,14 @@ namespace SVG_Creator  {
             @"<path d = ""M 309 198 A 1 1 0 0 0 321 199 A 1 1 0 0 0 309 198 M 352 187 A 1 1 0 0 0 363 184 A 1 1 0 0 0 352 186 M 405 183 C 396 183 390 161 406 140 C 419 160 415 185 405 183 M 453 185 A 1 1 0 0 0 464 184 A 1 1 0 0 0 453 185 M 498 199 A 1 1 0 0 0 509 199 A 1 1 0 0 0 498 199 Z "" stroke-width=""1"" stroke=""black"" fill=""Red"" id=""Crown""/>" +
             @"</g>";
 
-        //Weapon SVG
+        //Weapon YogaStick SVG
         public static string yogaDanda =
             @"<g>" +
             @"<title>Weapon</title>" +
             @"<path d = ""M 482 709 L 391 596 C 364 606 361 585 355 584 C 351 583 347 584 342 583 L 356 572 C 354 568.6667 367 572 374 581 C 380 586 388 587 394 586 C 401 574 393 562 388 550 C 387 547 388 545 390 543 L 400 536 L 401 545 L 410 560 C 410 566 415 576 402 587 L 402 593 L 490 699 C 493 709 481 710 485 709 Z"" stroke-width=""1"" stroke=""black"" fill=""Brown"" id=""Weapon"" />" +
             @"</g>";
 
+        //Weapon Mace SVG
         public static string mace =
             @"<g>" +
             @"<title>Mace</title>" +
@@ -105,6 +108,7 @@ namespace SVG_Creator  {
             @"<path d = ""M 471 599 C 491.6667 581 512.3333 563 533 545 C 546 535 562 530 575 524 l 8 30 C 580 570 563 583 474 633 L 459 610 Z"" stroke-width=""3"" stroke=""#1A6BA0"" fill=""skinColor"" id=""HandCover"" />" +
             @"<path d = ""M 554 532 l 20 -8 Z"" stroke-width=""7"" stroke=""skinColor"" fill=""skinColor"" id=""HandCover"" />" +
             @"</g>";
+
         //SVG Footer
         public static string svgFooter = @"</svg>";
 
@@ -114,7 +118,7 @@ namespace SVG_Creator  {
         //Background color map
         public static Dictionary<int, Traits> bgColorMap = new Dictionary<int, Traits>(5);
 
-        //Skin COlor map
+        //Skin Color map
         public static Dictionary<int, Traits> skinColorMap = new Dictionary<int, Traits>(5);
 
         //Dress map
@@ -153,7 +157,7 @@ namespace SVG_Creator  {
             weaponMap.Add(0, new Traits() { Gene = "Weapon", Index = 0, Name = "YogaStick", SVG = yogaDanda ,Description = "The Meditation Stick is a very ancient and traditional yoga tool to assist in one's spiritual practice" });
             weaponMap.Add(1, new Traits() { Gene = "Weapon", Index = 1, Name = "Mace", SVG = mace, Description = "The gada is the main weapon of the Hindu God Hanuman, wielding Gada means you are very strong" });
 
-            //Create map of Face
+            //Create map of Avatars
             faceMap.Add(0, new Traits() { Gene = "Face", Index = 0, Name = "HumanHappyFace", SVG = happyFace });
             faceMap.Add(1, new Traits() { Gene = "Face", Index = 1, Name = "MonketHappyFace", SVG = monkeyFace });
 
